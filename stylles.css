@@ -1,0 +1,634 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #111;
+  color: #fff;
+  line-height: 1.6;
+  
+}
+
+/* Cabeçalho */
+
+header {
+  background-color: #000;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  border-bottom: 2px solid #f2c94c;  
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.logo {
+  max-width: 110px;
+  border-radius: 50%;
+  width: 80px;
+  margin: 20px;
+  transition: transform 0.3s ease;
+  transform: scale(1);
+  cursor: pointer;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center; 
+  align-items: center;    
+  list-style: none;
+  gap: 15px;
+  margin: 0;              
+  padding: 0;
+}
+
+nav a {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  padding: 10px 15px;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  color: #f2c94c;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #fff;
+}
+
+nav a:active {
+  color: #f2c94c;
+  background-color: #222;
+  border-radius: 5px;
+  padding: 10px 15px;
+}
+
+
+/* Estilo do conteúdo principal */
+
+main {
+  padding-top: 170px;
+  margin: 0 auto;
+  max-width: 1200px;
+
+}
+
+/* Seções principais */
+
+.instrumentos-secao-principal {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  padding: 40px;
+  border-radius: 10px;
+  background-color: #1b1b1b;
+  margin-bottom: 40px;
+}
+
+.secao-instrumentos {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 20px;
+}
+
+.secao-instrumentos h1 {
+  color: #f2c94c;
+  margin-bottom: 20px;
+  font-size: 5.5rem;
+  text-shadow: 2px 2px 7px rgba(16, 15, 15, 0.5);
+}
+
+.instrumentos-secao-principal h2 {
+  color: #f2c94c;
+  margin-bottom: 15px;
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 7px rgba(16, 15, 15, 0.5);
+}
+
+.instrumentos-secao-principal p {
+  color: #ccc;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* Estilo dos instrumentos */
+
+.instrumento {
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  background-color: #282828;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.instrumento:hover {
+  transform: scale(1.05);
+}
+
+
+.instrumento,
+.instrumentos-diversos,
+.diversos-instrumentos > div {
+  background-color: #222;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.instrumento img,
+.instrumentos-diversos img,
+.diversos-instrumentos img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  margin-top: 20px;
+}
+
+.instrumento h2,
+.instrumentos-diversos h2 {
+  color: #f2c94c;
+  margin: 10px 0;
+  text-shadow: 2px 2px 7px rgba(16, 15, 15, 0.5);
+}
+
+/* Botões */
+button,
+a.btn {
+  background-color: #f2c94c;
+  color: #000;
+  border: none;
+  padding: 12px 40px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+button:hover,
+a.btn:hover {
+  background-color: #fff;
+  color: #000;
+  transform: scale(1.05);
+}
+
+.imagem-instrumentos-diversos {
+  padding: 40px;
+  background-color: #030303;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.instrumentos-diversos-titulo {
+  color: #f2c94c;
+  margin-bottom: 20px;
+  font-size: 3rem;
+}
+
+/* Diversos instrumentos */
+.diversos-instrumentos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  border-radius: 10px;
+  background-color: #1b1b1b;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.diversos-instrumentos h1 {
+  color: #f2c94c;
+  margin-bottom: 20px;
+  font-size: 3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 7px rgba(16, 15, 15, 0.5);
+}
+
+.diversos-instrumentos > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #212020;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  margin-top: 20;
+  transition: transform 0.3s ease;
+}
+
+.diversos-instrumentos h2 {
+  color: #f2c94c;
+  margin-bottom: 10px;
+  font-size: 1.8rem;
+  text-shadow: 2px 2px 7px rgba(16, 15, 15, 0.5);
+}
+
+.diversos-instrumentos > div:hover {
+  transform: scale(1.05);
+}
+
+.diversos-instrumentos p {
+  color: #ccc;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+/* Workshops estilo da caixa princopal */
+ .workshops {
+  text-align: center;
+  margin-left: 50px;
+  margin-right: 50px;
+  background-color: #212020;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.workshops img {
+  background-color: #030303;
+  text-align: center;
+  border-radius: 10px;
+  width: 500px;
+  height: auto;
+  margin-bottom: 15px;
+  margin-top: 20px;
+  transition: transform 0.3s ease;
+}
+
+.workshops h3 {
+  color: #f2c94c;
+  margin: 15px 0;
+  font-size: 3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.workshops img:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+.workshops img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.workshops p {
+  color: #ccc;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.workshops .btn {
+  margin-top: 25px;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+/* Sobre */
+
+.sobre-nos {
+  background-color: #212020;
+  border-radius: 10px;
+  margin: 40px 50px;
+  padding: 40px;
+}
+
+.sobre-nos-titulo {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.sobre-nos h2 {
+  color: #f2c94c;
+  font-size: 3.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 7px rgba(16, 15, 15, 0.5);
+}
+
+.sobre-nos-conteudo {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+}
+
+.sobre-nos-conteudo img {
+  width: 500px;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.sobre-nos-conteudo p {
+  color: #ccc;
+  line-height: 2.1;
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+/* .depoimentos-section*/
+
+.depoimentos-section {
+  background-color: #212020;
+  border-radius: 10px;
+  margin: 40px 50px;
+  padding: 40px;
+}
+
+.depoimentos-container {
+  display: flex;
+  flex-wrap: wrap; /* Quebra para baixo no mobile */
+  justify-content: center;
+  gap: 30px;
+}
+
+.depoimento {
+  align-items: center;
+  width: 300px;
+  background-color: #1b1b1b;
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.depoimento:hover {
+  transform: translateY(-8px);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.6);
+}
+
+.depoimentos-section img {
+  display: block;
+  margin: 20px auto;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.depoimentos-section h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #f2c94c;
+  font-size: 3.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 7px rgba(16, 15, 15, 0.5);
+}
+
+.depoimentos-section p {
+  text-align: center;
+  color: #ccc;
+  line-height: 1.6;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.depoimentos-section h4 {
+  color: #f2c94c;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .depoimento {
+    width: 90%;
+  }
+}
+
+
+/* Estilo do mapa */
+
+.Endereço h2 {
+  color: #f2c94c;
+  font-size: 3rem;
+  margin-bottom: 20px;
+  text-align: center;
+  text-shadow: 2px 2px 7px rgba(16, 15, 15, 0.5);
+}
+
+.Endereço{
+  text-align: center;
+  margin-top: 20px;
+  color: #ccc;
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  background-color: #212020;
+  padding: 20px;
+  border-radius: 10px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.mapa {
+  margin: 20px auto;
+  width: 100%;
+  height: 450px;
+  max-width: 600px;
+  border: 2px solid #f2c94c;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+
+/* Contato e Comunicação */
+
+.contato-comunicacao {
+  background-color: #212020;
+  padding: 40px;
+  border-radius: 10px;
+  margin: 40px 50px;
+  text-align: center;
+}
+
+.contato-comunicacao h2 {
+  color: #f2c94c;
+  font-size: 3rem;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 7px rgba(16, 15, 15, 0.5);
+}
+
+.contato-comunicacao p {
+  color: #ccc;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.contato-comunicacao a {
+  display: inline-block;
+  padding: 12px 30px;
+  border-radius: 50%;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.contato-comunicacao img {
+  display: inline-block;
+  vertical-align: middle;
+  width: 60px;
+  height: 60px;
+  margin-right: 10px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+/* Rodapé */
+footer {
+  background-color: #000;
+  color: #888;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  font-size: 14px;
+}
+
+
+/* Responsividade */
+
+@media (max-width: 1024px) {
+  .secao-instrumentos h1 {
+    font-size: 2.5rem;
+  }
+
+  .instrumentos-secao-principal h2 {
+    font-size: 1.8rem;
+  }
+
+  .workshops h3 {
+    font-size: 2rem;
+  }
+
+  .sobre-nos h2 {
+    font-size: 2rem;
+  }
+
+  .depoimentos-section h2 {
+    font-size: 2rem;
+  }
+
+  .endereco h2 {
+    font-size: 1.8rem;
+  }
+
+  .contato-comunicacao h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  main {
+    padding-top: 120px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    margin-left: 0;
+  }
+
+  .instrumentos-secao-principal {
+    padding: 20px 10px;
+  }
+
+  .secao-instrumentos h1 {
+    font-size: 2rem;
+  }
+
+  .instrumentos-secao-principal h2 {
+    font-size: 1.5rem;
+  }
+
+  .sobre-nos-conteudo {
+    flex-direction: column;
+  }
+
+  .sobre-nos-conteudo img,
+  .sobre-nos-conteudo p {
+    max-width: 100%;
+  }
+
+  .depoimento {
+    width: 90%;
+  }
+
+  .workshops {
+    margin: 20px 10px 50px 10px;
+  }
+
+  .endereco {
+    margin: 20px 10px 40px 10px;
+  }
+
+  .contato-comunicacao {
+    margin: 20px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  nav a {
+    font-size: 1rem;
+    padding: 8px 12px;
+  }
+
+  button,
+  a.btn {
+    padding: 10px 30px;
+    font-size: 1rem;
+  }
+
+  .instrumentos-secao-principal {
+    gap: 20px;
+  }
+
+  .diversos-instrumentos {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Animação fade-in para os elementos ao scroll */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+
+
+
+
